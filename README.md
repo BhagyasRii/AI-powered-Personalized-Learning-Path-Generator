@@ -18,6 +18,12 @@ How It Works
 4. The user receives a visualized timeline and recommended resources.
 5. Users track progress and explore trending GitHub projects.
 
+
+Future Scope & Improvements
+1. Integration of AI-based chat assistants for learning guidance.
+2. Support for more learning platforms like Udemy and edX.
+3. Adaptive learning paths based on real-time user progress.
+
 Installation & Setup
 
 Clone the repository
