@@ -459,7 +459,7 @@ def generate_roadmap(topic, resources, time_limit=None, user_level="beginner"):
     
     # Add prerequisites section if available
     if prerequisites:
-    prereq_resources = []
+        prereq_resources = []
         for prereq in prerequisites:
             # Assign next_topic before using it in the dictionary
             next_topic = next_topics[0] if next_topics else "General AI Concepts"
