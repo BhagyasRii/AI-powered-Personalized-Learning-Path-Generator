@@ -625,9 +625,8 @@ def generate_learning_path(topic):
     
     # Get prerequisites and next topics
     prerequisites = TOPIC_GRAPH[topic_key].get("prerequisites", [])
-    next_topic = next_topics[0] if next_topics else "AI Basics"
-    next_topics = TOPIC_GRAPH[topic_key].get("next_topics", [])
-    
+    next_topics = TOPIC_GRAPH[topic_key].get("next_topics", [])  # Now defined before use
+    next_topic = next_topics[0] if next_topics else "AI Basics"  # Safe to use now
     
     # Generate a dictionary representation of the learning path
     learning_path = {
@@ -637,6 +636,7 @@ def generate_learning_path(topic):
     }
     
     return learning_path
+
 
 # Main Streamlit UI
 def main():
