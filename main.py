@@ -395,7 +395,6 @@ def generate_roadmap(topic, resources, time_limit=None, user_level="beginner"):
     
     # Get next topics if available
     next_topics = []
-    next_topic = next_topics[0] if next_topics else "General AI Concepts"
     if topic_key and "next_topics" in TOPIC_GRAPH[topic_key]:
         next_topics = TOPIC_GRAPH[topic_key]["next_topics"]
     
