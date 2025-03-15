@@ -466,7 +466,7 @@ def generate_roadmap(topic, resources, time_limit=None, user_level="beginner"):
                 "title": f"Learn {prereq.title()} Fundamentals",
                 "type": "prerequisite",
                 "platform": "Various",
-                "url": f"https://www.google.com/search?q=learn+{next_topic.replace(' ', '+')}" if next_topics else "https://www.google.com/",
+                "url": f"https://www.google.com/search?q=learn+{next_topic.replace(' ', '+')}",
                 "difficulty": "beginner",
                 "duration_hours": 10,
                 "rating": 4.5,
@@ -621,7 +621,9 @@ def generate_learning_path(topic):
     
     # Get prerequisites and next topics
     prerequisites = TOPIC_GRAPH[topic_key].get("prerequisites", [])
+    next_topic = next_topics[0] if next_topics else "AI Basics"
     next_topics = TOPIC_GRAPH[topic_key].get("next_topics", [])
+    
     
     # Generate a dictionary representation of the learning path
     learning_path = {
