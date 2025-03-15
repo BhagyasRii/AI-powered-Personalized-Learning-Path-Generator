@@ -459,20 +459,23 @@ def generate_roadmap(topic, resources, time_limit=None, user_level="beginner"):
     
     # Add prerequisites section if available
     if prerequisites:
-        prereq_resources = []
-        for prereq in prerequisites:
-            # Add a placeholder resource for each prerequisite
-            prereq_resources.append({
-                "title": f"Learn {prereq.title()} Fundamentals",
-                "type": "prerequisite",
-                "platform": "Various",
-                next_topic = next_topics[0] if next_topics else "General AI Concepts",
-                "url": f"https://www.google.com/search?q=learn+{next_topic.replace(' ', '+')}",
-                "difficulty": "beginner",
-                "duration_hours": 10,
-                "rating": 4.5,
-                "quality_score": 0.85
-            })
+    prereq_resources = []
+    for prereq in prerequisites:
+        # Assign next_topic before using it in the dictionary
+        next_topic = next_topics[0] if next_topics else "General AI Concepts"
+
+        # Add a placeholder resource for each prerequisite
+        prereq_resources.append({
+            "title": f"Learn {prereq.title()} Fundamentals",
+            "type": "prerequisite",
+            "platform": "Various",
+            "url": f"https://www.google.com/search?q=learn+{next_topic.replace(' ', '+')}",
+            "difficulty": "beginner",
+            "duration_hours": 10,
+            "rating": 4.5,
+            "quality_score": 0.85
+        })
+
         
         roadmap.append({
             "phase": "Prerequisites",
