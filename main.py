@@ -466,7 +466,7 @@ def generate_roadmap(topic, resources, time_limit=None, user_level="beginner"):
                 "title": f"Learn {prereq.title()} Fundamentals",
                 "type": "prerequisite",
                 "platform": "Various",
-                "url": f"https://www.google.com/search?q=learn+{next_topic.replace(' ', '+')}",
+                "url": f"https://www.google.com/search?q=learn+{next_topic.replace(' ', '+')}" if next_topics else "https://www.google.com/",
                 "difficulty": "beginner",
                 "duration_hours": 10,
                 "rating": 4.5,
